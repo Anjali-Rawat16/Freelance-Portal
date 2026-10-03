@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillBook - Freelance Booking Portal</title>
+
+    <meta name="description"
+        content="SkillBook is a freelance booking portal for finding and booking skilled professionals.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>SkillBook</h1>
+        <p>Find the right freelancer for your next project.</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#freelancers">Freelancers</a></li>
+            <li><a href="#bookings">My Bookings</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="home" aria-labelledby="home-heading">
+            <h2 id="home-heading">Find a Freelancer</h2>
+
+            <p>
+                Browse skilled professionals and book a service that matches your needs.
+            </p>
+
+            <button type="button">Explore Freelancers</button>
+        </section>
+
+        <section id="freelancers" aria-labelledby="freelancers-heading">
+            <h2 id="freelancers-heading">Featured Freelancers</h2>
+            <label for="freelancer-search">Search freelancers</label>
+            <input type="search" id="freelancer-search" placeholder="Search by name or skill">
+            <label for="category-filter">Filter by category</label>
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="development">Development</option>
+                <option value="design">Design</option>
+                <option value="writing">Writing</option>
+            </select>
+
+            <div id="freelancer-list">
+
+                <article>
+                    <h3>Aarav Sharma</h3>
+                    <p>Web Developer</p>
+                    <p>Builds modern and responsive websites.</p>
+                    <p>Starting at ₹1,500</p>
+                    <button type="button">View Profile</button>
+                </article>
+
+                <article>
+                    <h3>Priya Verma</h3>
+                    <p>UI/UX Designer</p>
+                    <p>Creates clean and user-friendly interfaces.</p>
+                    <p>Starting at ₹1,200</p>
+                    <button type="button">View Profile</button>
+                </article>
+
+                <article>
+                    <h3>Rohan Mehta</h3>
+                    <p>Content Writer</p>
+                    <p>Creates engaging website and marketing content.</p>
+                    <p>Starting at ₹800</p>
+                    <button type="button">View Profile</button>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="profile" aria-labelledby="profile-heading">
+            <h2 id="profile-heading">Freelancer Profile</h2>
+            <p id="profile-message">Select a freelancer to view their profile.</p>
+        </section>
+
+
+        <section id="bookings" aria-labelledby="bookings-heading">
+            <h2 id="bookings-heading">My Bookings</h2>
+
+          <form id="booking-form">
+
+  <div>
+    <label for="booking-freelancer">Freelancer</label>
+    <select id="booking-freelancer" required>
+      <option value="">Select a freelancer</option>
+      <option value="Aarav Sharma">Aarav Sharma</option>
+      <option value="Priya Verma">Priya Verma</option>
+      <option value="Rohan Mehta">Rohan Mehta</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="booking-date">Booking Date</label>
+    <input type="date" id="booking-date" required>
+  </div>
+
+  <div>
+    <label for="booking-details">Project Details</label>
+    <textarea
+      id="booking-details"
+      rows="4"
+      placeholder="Describe your project"
+      required
+    ></textarea>
+  </div>
+
+  <button type="submit">Book Freelancer</button>
+
+</form>
+
+<div id="booking-message"></div>
+<div id="booking-list"></div>
+
+        </section>
+
+        <section id="signup" aria-labelledby="signup-heading">
+  <h2 id="signup-heading">Create Account</h2>
+
+  <form id="signup-form">
+    <div>
+      <label for="signup-email">Email</label>
+      <input
+        type="email"
+        id="signup-email"
+        required
+        autocomplete="email"
+      >
+    </div>
+
+    <div>
+      <label for="signup-password">Password</label>
+      <input
+        type="password"
+        id="signup-password"
+        required
+        autocomplete="new-password"
+      >
+    </div>
+
+    <button type="submit">Create Account</button>
+  </form>
+
+  <p id="signup-message"></p>
+</section>
+
+        <section id="login" aria-labelledby="login-heading">
+            <h2 id="login-heading">Login</h2>
+
+            <form>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" autocomplete="current-password" required>
+                </div>
+
+                <button type="submit">Login</button>
+                <p id="login-status"></p>
+            </form>
+
+            <button type="button"  id="logout-button">Logout</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SkillBook — Freelance Booking Portal</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
