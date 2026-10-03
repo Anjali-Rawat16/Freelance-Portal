@@ -65,3 +65,7 @@ localStorage
 4. Open the website in your browser.
 
 No backend server or database is required. The project uses browser localStorage for persistent client-side data.
+
+## Live Demo
+
+https://skillbook-freelance-portal.vercel.app/
